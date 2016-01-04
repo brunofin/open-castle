@@ -1,0 +1,113 @@
+"map": {
+  "name": "Developer map 001",
+  "guid": "",
+  "version": "1.0",
+  "createDate": "",
+  "width": 300,
+  "height": 300,
+  "author": {
+    "name": "Bruno Finger",
+    "contact": "bruno.finger12@gmail.com"
+  },
+  "repository": "game",
+  "tiles": [
+    {
+      "x": 0,
+      "y": 0
+    },
+    {
+      "x": 1,
+      "y": 0
+    },
+    {
+      "x": 2,
+      "y": 0
+    },
+    {
+      "x": 3,
+      "y": 0
+    },
+    {
+      "x": 6,
+      "y": 0
+    },
+    {
+      "x": 7,
+      "y": 0
+    },
+    {
+      "x": 8,
+      "y": 0
+    },
+    {
+      "x": 11,
+      "y": 0
+    },
+    {
+      "x": 12,
+      "y": 0
+    },
+
+    {
+      "type": "WALL-BLOCK",
+      "x": 0,
+      "y": 4
+    },
+    {
+      "type": "WALL-BLOCK",
+      "x": 0,
+      "y": 2
+    },
+    {
+      "type": "WALL-BLOCK",
+      "x": 0,
+      "y": 3
+    },
+
+    {
+      "type": "FLOOR-BLOCK",
+      "x": 0,
+      "y": 1
+    },
+    {
+      "type": "FLOOR-BLOCK",
+      "x": 1,
+      "y": 1
+    },
+    {
+      "type": "FLOOR-BLOCK",
+      "x": 2,
+      "y": 1
+    },
+    {
+      "type": "FLOOR-BLOCK",
+      "x": 3,
+      "y": 1
+    },
+    {
+      "type": "FLOOR-BLOCK",
+      "x": 6,
+      "y": 1
+    },
+    {
+      "type": "FLOOR-BLOCK",
+      "x": 7,
+      "y": 1
+    },
+    {
+      "type": "FLOOR-BLOCK",
+      "x": 8,
+      "y": 1
+    },
+    {
+      "type": "FLOOR-BLOCK",
+      "x": 11,
+      "y": 1
+    },
+    {
+      "type": "FLOOR-BLOCK",
+      "x": 12,
+      "y": 1
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="OpenCastle">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <script>
+    // Browser compatibility detection and redirection.
+
+    function get_browser_info() {
+      var ua = navigator.userAgent,
+        tem, M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+      if (/trident/i.test(M[1])) {
+        tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+        return {
+          name: 'IE',
+          version: (tem[1] || '')
+        };
+      }
+      if (M[1] === 'Chrome') {
+        tem = ua.match(/\bOPR\/(\d+)/)
+        if (tem != null) {
+          return {
+            name: 'Opera',
+            version: tem[1]
+          };
+        }
+      }
+      M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+      if ((tem = ua.match(/version\/(\d+)/i)) != null) {
+        M.splice(1, 1, tem[1]);
+      }
+      return {
+        name: M[0],
+        version: parseInt(M[1])
+      };
+    }
+
+    var b = get_browser_info(),
+      version = 0;
+
+    switch (b.name.toLowerCase()) {
+      case 'chrome':
+      case 'chromium':
+        version = 43;
+        break;
+      case 'firefox':
+        version = 38;
+        break;
+      case 'opera':
+        version = 31;
+        break;
+      case 'safari':
+        version = 8;
+        break;
+      case 'ie':
+      case 'msie':
+        version = 10;
+        break;
+      default:
+        window.location.href = '/browserNotSupported.html';
+    }
+
+    if (b.version < version) {
+      window.location.href = '/browserNotSupported.html';
+    }
+
+    </script>
+    <title>Open Castle</title>
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="styles.min.css">
+    <!-- endinject -->
+
+    <!-- inject:js -->
+    <script src="app.min.js"></script>
+    <!-- endinject -->
+  </head>
+  <body layout
+      layout-align="center center">
+
+    <div ng-hide="true">
+      <h1>Loadin, please wait...</h1>
+    </div>
+
+    <game>
+    </game>
+
+  </body>
+</html>
